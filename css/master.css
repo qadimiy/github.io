@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Lexend+Deca:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lexend Deca', sans-serif;
+}
+
+body {
+    background-color: #272727;
+    display: flex;
+}
+
+.vertical-menu {
+    width: 95px;
+    height: 100vh;
+    background-color: #272727;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-right: 1px solid #6EEB83;
+}
+
+.vertical-menu a {
+    padding: 50px 0;
+    width: 100%;
+    text-align: center;
+    display: block;
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+.vertical-menu a:hover {
+    background-color: #ccc;
+    /* Dark grey background on mouse-over */
+}
+
+.vertical-menu a.active {
+    background-color: #04AA6D;
+    color: white;
+}
+
+
+.content {
+    color: white;
+    padding-left: 100px;
+    padding-top: 70px;
+}
+
+.content .headContent {
+    display: flex;
+    flex-direction: column;
+}
+
+.content .headContent div {
+    width: 39px;
+    height: 4px;
+    background: #04AA6D;
+    margin-bottom: 4px;
+}
+
+.content .headContent h3 {
+    font-size: 20px;
+}
+
+
+.horizontal-menu {
+    position: fixed;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    height: 95px;
+    width: 90vw;
+    background-color: #272727;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #6EEB83;
+    display: none;
+}
+
+.horizontal-menu a {
+    width: 100%;
+    padding: 25px 0;
+    text-align: center;
+    display: block;
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+.horizontal-menu a:hover {
+    background-color: #ccc;
+    /* Dark grey background on mouse-over */
+}
+
+.horizontal-menu a.active {
+    background-color: #04AA6D;
+    color: white;
+}
+
+@media only screen and (max-width: 1024px) {
+  .horizontal-menu {
+    display: block;
+    display: flex;
+  }
+
+  .vertical-menu {
+    display: none;
+  }
+
+  .content {
+    padding: 0;
+    margin: 0 auto;
+    width: 100vw;
+    text-align: center;
+  }
+}
